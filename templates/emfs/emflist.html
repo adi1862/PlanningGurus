@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% load static %}
+
+<!-- {{ object_list }} -->
+{% block body %}
+
+	{% for object in object_list %}
+		<div class="emfcard">
+			<div class="emfinfo">
+			<h2>{{ object.title }}</h2><br>
+			<p style="color:black;"><i>{{ object.email }}</i></p><br>
+			<p>Ph- {{ object.phone }}</p><br>
+			<p>{{ object.city }}</p>
+			</div>
+			<div class="emfdes">
+				<p>{{ object.events }}</p>
+			</div>
+			<a href="#">Book</a>
+		</div> 
+	{% endfor %}
+
+{% endblock body %}

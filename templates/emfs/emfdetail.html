@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block body %}
+<!-- <img src='{% static "img/coming-soon.jpg" %}' style="width: 100%; margin-top:0px;"> -->
+	<div class="emfcard">
+		<div class="emfinfo">
+		<h2>{{ object.title }}</h2><br>
+		<p style="color:black;"><i>{{ object.email }}</i></p><br>
+		<p>Ph- {{ object.phone }}</p><br>
+		<p>{{ object.city }}</p>
+		</div>
+		<div class="emfdes">
+			<p>{{ object.events }}</p>
+		</div>
+		<a href="#">Book</a>
+	</div>
+
+{% endblock body %}

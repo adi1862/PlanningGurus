@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block body %}
+	{% if generate %}
+		<script>alert("Invalid email or password.");</script>
+	{% endif %}
+	<div class="container">
+		<h2>Login</h2>
+		<form class="form" method="POST">{% csrf_token %}
+			{{ form }}
+			<input type="submit" value="Login" style="width: 90%; margin-right: 25px;">
+		</form>
+	</div>
+{% endblock body %}

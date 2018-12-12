@@ -1,0 +1,234 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href='{% static "css/card.css" %}'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href='{% static "css/main.css" %}'>
+</head>
+<body>
+  <!--  temp html begins here -->
+  <div class="topnav">
+  <a href="../"><b>Home</b></a>
+  <a href="#about"><b>About</b></a>
+  <a href="../contact"><b>Contact</b></a>
+  <!-- <a href="../register" class="btn_link">Register</a> -->
+  {% block login %}
+	  <div class="login-container">
+		{% if request.user.is_authenticated %}
+			<!-- <a href=""><b>Welcome {{ request.user.username }}</b></a> -->
+   			<a href="../logout"><b>Logout</b></a>
+   		{% else %}
+			<a href="../login"><b>Login</b></a>
+			<a href="../register"><b>Sign up</b></a>
+		{% endif %}
+	  </div>
+  {% endblock login %}
+</div>
+  <!-- temp html ends here -->
+    <div class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn"><b>Weddings</b><i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <div class="header"></div>   
+          <div class="row">
+            <div class="column">
+              <h3>Destination</h3>
+              <a href="#">India</a>
+              <a href="#">Foreign</a>
+              <!-- <a href="#">Mars</a> -->
+            </div>
+            <div class="column">
+              <h3>Themed</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <div class="column">
+              <h3>Luxury</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><b>Anniversaries</b><i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <div class="header"></div>   
+          <div class="row">
+            <div class="column">
+              <h3>Category 1</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <div class="column">
+              <h3>Category 2</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <div class="column">
+              <h3>Category 3</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><b>Birthdays</b><i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <div class="header"><!-- <h2>Mega Menu</h2> --></div>   
+          <div class="row">
+            <div class="column">
+              <h3>Category 1</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <div class="column">
+              <h3>Category 2</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <div class="column">
+              <h3>Category 3</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+{% block body %}
+    <!-- slideshow html starts here -->
+    <div class="slideshow-container">
+	    <div class="mySlides fade">
+	      <div class="numbertext">1 / 5</div>
+	        <img src='{% static "img/1.jpg" %}' style="width: 90%;">
+	        <!-- <div class="text">Festive Parites</div> -->
+	      </div>
+	    <div class="mySlides fade">
+	      <div class="numbertext">2 / 5</div>
+	      <img src='{% static "img/2.jpg" %}' style="width: 90%;">
+	      <!-- <div class="text">Caption Two</div> -->
+	    </div>
+	    <div class="mySlides fade">
+	      <div class="numbertext">3 / 5</div>
+	      <img src='{% static "img/3.jpg" %}' style="width: 90%;">
+	      <!-- <div class="text">Caption Two</div> -->
+	    </div>
+	    <div class="mySlides fade">
+	      <div class="numbertext">4 / 5</div>
+	      <img src='{% static "img/4.png" %}' style="width: 90%;">
+	      <!-- <div class="text">Caption Two</div> -->
+	    </div>
+	    <div class="mySlides fade">
+	      <div class="numbertext">5 / 5</div>
+	      <img src='{% static "img/4.png" %}' style="width: 90%;">
+	      <!-- <div class="text">Caption Two</div> -->
+	    </div>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span> 
+  </div>
+  <p style="text-align: center;font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;">Your one stop for all the events. We have got you covered for the birthdays, kitties, cocktails parts, and all the other kind of parties </p>
+<!-- product start-->
+<!-- <div class="content">
+	<img src='{% static "img/fall2.png" %}' style="width: 100%;">
+</div>
+<div class="content">
+	<p class="para">My content goes here</p>
+</div> -->
+<div class="card-container">
+<div class="card">
+  <h1>Destination Wedding</h1>
+  <img src='{% static "img/dw.png" %}' alt="Denim Jeans" style="width:100%;height:395px;">
+  <p><a href='../search/?q=Destination Wedding'>BOOK NOW</a></p>
+</div>
+<div class="card">
+  <h1>Birthdays</h1>
+  <img src='{% static "img/b.png" %}' alt="Denim Jeans" style="width:100%;height:395px;">
+  <!-- <p><a href="../emfs">BOOK NOW</a></p> -->
+  <p><a href="../search/?q=Birthday">BOOK NOW</a></p>
+</div>
+<div class="card">
+  <h1>Weddings</h1>
+  <img src='{% static "img/w.png" %}' alt="Denim Jeans" style="width:100%;height:395px;">
+  <p><a href="../search/?q=Wedding">BOOK NOW</a></p>
+</div>
+<div class="card">
+  <h1>Anniversaries</h1>
+  <img src='{% static "img/an.jpg" %}' alt="Denim Jeans" style="width:100%;height:395px;">
+  <p><a href='../search/?q=Anniversary'>BOOK NOW</a></p>
+</div>
+<div class="card">
+  <h1>Festive Parties</h1>
+  <img src='{% static "img/f.png" %}' alt="Denim Jeans" style="width:100%;height:395px;">
+  <p><a  href='../search/?q=Festive'>BOOK NOW</a></p>
+</div>
+<div class="card">
+  <h1>Special Events</h1>
+  <img src='{% static "img/se.png" %}' alt="Denim Jeans" style="width:100%;height:395px;">
+  <p><a href='../search/?q=Special'>BOOK NOW</a></p>
+</div>
+</div>
+<!-- product end -->
+{% endblock %}
+  <script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
+  </script>
+    <!-- slideshow html ends here -->
+{% block foot %}
+<footer>
+	<div class="navbar-static-bottom" id="footer">
+	<div class="footer">
+		<div id="social">
+			<a class="facebookBtn smGlobalBtn" href="#" ></a>
+			<a class="twitterBtn smGlobalBtn" href="#" ></a>
+			<a class="googleplusBtn smGlobalBtn" href="#" ></a>
+			<a class="linkedinBtn smGlobalBtn" href="#" ></a>
+			<a class="pinterestBtn smGlobalBtn" href="#" ></a>
+			<a class="tumblrBtn smGlobalBtn" href="#" ></a>
+			<a class="rssBtn smGlobalBtn" href="#" ></a>
+		</div>
+		<p style="color:snow;">&copy; Planning Gurus 2018</p>
+		<p><a style="color:snow;" href="../contact" style="text-decoration: none;">Contact us</a></p>
+	</div>
+</div>
+</footer>
+{% endblock %} 
+</body>
+</html>

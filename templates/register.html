@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block body %}
+<body background='{% static "img/theme.jpg" %}'>
+		<div class="container">
+		<h2>Register</h2>
+		<form class="form" method="POST">{% csrf_token %}
+			{{ form }}
+			<p><b>By clicking sign up, you agree to our<br><u>Terms of Use</u> & <u>Policy Conditions</u></b>.</p>
+			<input type="submit" value="Sign Up">
+		</form>
+	</div>
+	</img>
+{% endblock body %}
